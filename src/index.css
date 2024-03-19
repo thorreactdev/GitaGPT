@@ -1,13 +1,61 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto" , "Poppins"
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hero-image{
+  background-image: url(../src/Assets/banner2.png);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  margin-top: 10px;
+  position: relative;
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
 }
+
+.hero-image::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .6;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+.news-letter{
+  background-image: url(../src/Assets/newsbg.png);
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  height: 34vh;
+  background-color:  #252525;
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap : 40px;
+  padding: 20px 0px;
+
+}
+
+.blur-overlay{
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
